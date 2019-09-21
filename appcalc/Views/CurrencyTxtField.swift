@@ -11,6 +11,11 @@ import UIKit
 @IBDesignable
 class CurrencyTxtField: UITextField {
     
+    
+    
+    
+    
+    
     override func prepareForInterfaceBuilder() {
         customizeView()
     }
@@ -42,7 +47,7 @@ class CurrencyTxtField: UITextField {
             placeholder=" "
         }
         
-        let place = NSAttributedString(string: placeholder!, attributes:[.foregroundColor:#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)] )
+        let place = NSAttributedString(string: placeholder!, attributes:[.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)] )
         attributedPlaceholder=place
         textColor=#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }

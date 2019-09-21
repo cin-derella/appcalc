@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,22 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="appcalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="appcalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="209305" translatesAutoresizingMaskIntoConstraints="NO" id="P2v-YD-4PI">
-                                <rect key="frame" x="0.0" y="0.0" width="389" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cin.derel.la" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRZ-93-bSz">
-                                <rect key="frame" x="117.5" y="80" width="140" height="40"/>
+                                <rect key="frame" x="132" y="80" width="150" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="ReH-Ul-HbF"/>
+                                    <constraint firstAttribute="width" constant="150" id="ReH-Ul-HbF"/>
                                     <constraint firstAttribute="height" constant="40" id="mzi-2l-Tsd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
@@ -39,25 +39,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-x4-Pec" customClass="CurrencyTxtField" customModule="appcalc" customModuleProvider="target">
-                                <rect key="frame" x="78" y="163" width="219" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-x4-Pec" customClass="CurrencyTxtField" customModule="appcalc" customModuleProvider="target">
+                                <rect key="frame" x="50" y="170" width="314" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="pfQ-fH-Xu7"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9t-4u-e5c" customClass="CurrencyTxtField" customModule="appcalc" customModuleProvider="target">
+                                <rect key="frame" x="50" y="259" width="314" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="4H7-V8-tWR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QRZ-93-bSz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="0Qi-dt-ADm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o0X-x4-Pec" secondAttribute="trailing" constant="50" id="0ir-cm-sF1"/>
+                            <constraint firstItem="e9t-4u-e5c" firstAttribute="leading" secondItem="o0X-x4-Pec" secondAttribute="leading" id="QBj-0E-0AZ"/>
+                            <constraint firstItem="o0X-x4-Pec" firstAttribute="top" secondItem="QRZ-93-bSz" secondAttribute="bottom" constant="50" id="TCv-iL-YiD"/>
+                            <constraint firstItem="o0X-x4-Pec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="TfX-82-Ocv"/>
+                            <constraint firstItem="e9t-4u-e5c" firstAttribute="trailing" secondItem="o0X-x4-Pec" secondAttribute="trailing" id="ftT-0X-m9B"/>
                             <constraint firstItem="QRZ-93-bSz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pVG-2G-l47"/>
+                            <constraint firstItem="e9t-4u-e5c" firstAttribute="height" secondItem="o0X-x4-Pec" secondAttribute="height" id="tqb-Pi-TLH"/>
+                            <constraint firstItem="e9t-4u-e5c" firstAttribute="top" secondItem="o0X-x4-Pec" secondAttribute="bottom" constant="37" id="uLe-wi-qlV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="e9t-4u-e5c" id="Grd-Xc-gcS"/>
+                        <outlet property="wageTxt" destination="o0X-x4-Pec" id="afG-mH-zBn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="77.811094452773617"/>
+            <point key="canvasLocation" x="584.05797101449275" y="77.445652173913047"/>
         </scene>
     </scenes>
     <resources>
